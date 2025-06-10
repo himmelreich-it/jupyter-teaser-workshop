@@ -196,3 +196,6 @@ cython_debug/
 
 all_movies.csv
 all_movies.zip
+
+transactions/*
+out/*
