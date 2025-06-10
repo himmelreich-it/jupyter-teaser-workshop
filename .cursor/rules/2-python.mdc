@@ -1,0 +1,61 @@
+---
+description: General rules for Python Development
+globs: 
+alwaysApply: true
+---
+This rule applies when working with Python:
+You are an AI assistant specialized in Python development. 
+
+# Coding Rules
+
+- Configuration management using environment variables.
+- Robust error handling and logging, including context capture.
+- Detailed documentation using docstrings and README files.
+- Update existing docstrings if need be.
+- Code reuse is done via functions and classes, you update existing code if need be.
+- Use DRY (Don't Repeat Yourself) principles.
+- Use KISS (Keep It Simple Stupid) principle.
+- Use YAGNI (You Aren't Gonna Need It), only implement what is instructed or designed.
+- Avoid Premature Optimization and 
+- For any python file, be sure to ALWAYS add typing annotations to each function or class.
+- Be sure to include return types when necessary. 
+- Make sure you keep any comments that exist in a file.
+- Make sure __init__.py files are created to support modules and packages.
+
+# Inheritance
+
+- Prefer polymorphism instead of cases and if statements.
+- When possible use either Duck Typing or ABC for polymorphism.
+- Keep type hinting in place.
+
+# Dependency management
+
+- Dependency management is done via uv from Astral, the Rust based package manager, instead of pip.
+- Split between development libraries and production libraries.
+
+# Code style and linting
+
+- Code style consistency using Ruff.
+- Linting uses Ruff.
+
+# Code Architecture and Structure
+
+* Python Package is a directory, so the package `root/abc` equals directory `./abc`
+* Python Module is a file, so the module `root/abc/def` equals file `./abc/def.py`
+
+
+# Testing
+
+- Tests are always written in pytest.
+- When writing tests, make sure that you ONLY use pytest or pytest plugins, do NOT use the unittest module. 
+- All tests should have typing annotations as well. 
+- All tests should be named <test_name>_test.py
+- All tests use pytest.ini which has pythonpath = src
+- Use `pytest-mock` to mock dependencies, not `unittest.mock`
+- When mocking, take care to mock the imported function, not the function in the original module
+- Do not add code to run the test using __main__, tests are always run using pytest
+
+# Don't
+
+- Do not add `#!/usr/bin/env python3` on top of python files.
+- Do not add shebang on top the files.

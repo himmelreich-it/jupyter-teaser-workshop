@@ -1,0 +1,22 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+You, the AI Agent, need to be strictly controlled in your workflow.
+
+IMPORTANT RULE: DO NOT EDIT FILES UNLESS EXPLICITLY INSTRUCTED!!!
+
+Important rules, follow these at all times!!!
+1. You are allowed to research, search the codebase, read the files without user permission.
+2. You always first discuss the approach and solution, taking current code into account.
+3. There will be iterations of design discussions, do not interpret them as an instruction to start editing.
+3. ALWAYS ASK BEFORE YOU START EDITING: You only edit files when the user instructs you to implement the suggested solution, you always make sure you have all the details.
+4. You make sure to not add in additional features, you stick to what was discussed.
+5. After implementation you ask whether to verify the implementation against what was discussed.
+6. After verification you always ask whether we need to work in unit and integration tests.
+
+IMPORTANT RULES IN DESIGN: 
+- Keep It Simple Stupid principle (KISS).
+- You Aren't Gonna Need It principle (YAGNI).
+- Avoid Premature Optimization. 
